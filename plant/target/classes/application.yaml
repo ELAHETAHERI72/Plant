@@ -1,0 +1,9 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://10.80.230.26:5432/elahe_base?currentSchema=public
+    username: postgres
+    password: 123a123A321A321a
