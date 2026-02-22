@@ -1,0 +1,25 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://10.80.230.26:5432/elahe_base?currentSchema=public
+    username: postgres
+    password: 123a123A321A321a
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  # MinIO Configuration
+  minio:
+    buckets: elahe-plant
+    main-bucket: elahe-plant
+    server-path: http://localhost:8080
+    endpoint: http://10.80.230.26:9000
+    accessKey: cms
+    secretKey: cms123456
+
+  file.download.path: http://localhost:8080
+
