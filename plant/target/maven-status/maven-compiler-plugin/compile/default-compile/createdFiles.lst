@@ -1,9 +1,0 @@
-com\plant\plant\dto\PlantRequest.class
-com\plant\plant\enumeration\PlantType.class
-com\plant\plant\wen\PlantResource.class
-com\plant\plant\domain\Plant.class
-com\plant\plant\service\impl\PlantServiceImpl.class
-com\plant\plant\service\PlantService.class
-com\plant\plant\dto\PlantResponse.class
-com\plant\plant\PlantApplication.class
-com\plant\plant\repository\PlantRepository.class
