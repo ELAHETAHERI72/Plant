@@ -16,15 +16,15 @@ import java.io.IOException;
 @Transactional(readOnly = true)
 public class PostgresqlFileServiceImpl implements PostgresqlFileService {
 
-    private final UploadFileRepository fileRepository;
+    private final UploadFileRepository repo;
 
     private PostgresUploadMapper mapper;
 
     @Override
     @Transactional
-    public UploadFile uploadFile(MultipartFile file) {
+    public UploadFile storeFile(MultipartFile file) {
         System.out.println(file.getSize());
         UploadFile fileEntity = mapper.toDomain(file);
-        return fileRepository.save(fileEntity);
+        return repo.save(fileEntity);
     }
 }

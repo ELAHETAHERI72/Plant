@@ -1,7 +1,7 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true
   datasource:
     url: jdbc:postgresql://10.80.230.26:5432/elahe_base?currentSchema=public
@@ -13,13 +13,15 @@ spring:
       max-request-size: 10MB
 
   # MinIO Configuration
-  minio:
-    buckets: elahe-plant
-    main-bucket: elahe-plant
-    server-path: http://localhost:8080
-    endpoint: http://10.80.230.26:9000
-    accessKey: cms
-    secretKey: cms123456
+minio:
+  buckets: plant
+  main-bucket: plant
+  server-path: http://localhost:8080
+  endpoint: http://10.80.230.26:9000
+  accessKey: cms
+  secretKey: cms123456
 
-  file.download.path: http://localhost:8080
+file:
+  download:
+    path: http://localhost:8080
 

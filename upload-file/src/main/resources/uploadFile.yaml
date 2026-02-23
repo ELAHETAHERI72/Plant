@@ -1,0 +1,14 @@
+#servlet:
+#  multipart:
+#    max-file-size: 1MB
+#    max-request-size: 1MB
+
+# MinIO Configuration
+#minio:
+#  buckets: plant
+#  url: http://10.80.230.26:9000
+#  accessKey: cms
+#  secretKey: cms123456
+#
+#file.download.path: "./files"
+
