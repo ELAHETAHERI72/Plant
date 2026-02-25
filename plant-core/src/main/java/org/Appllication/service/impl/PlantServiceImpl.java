@@ -27,7 +27,7 @@ import java.util.List;
 public class PlantServiceImpl implements PlantService {
 
     private final PlantRepository baseRepository;
-    private PlantMapper plantMapper;
+    private final PlantMapper plantMapper;
 
     @Override
     @Transactional
@@ -49,7 +49,7 @@ public class PlantServiceImpl implements PlantService {
         plant.setName(model.getName());
         plant.setColor(model.getColor());
         plant.setDescription(model.getDescription());
-        plant.setType(model.getType());
+//        plant.setType(model.getType());
         plant.setAge(model.getAge());
         plant.setSize(model.getSize());
         plant.setHasFlower(model.getHasFlower());

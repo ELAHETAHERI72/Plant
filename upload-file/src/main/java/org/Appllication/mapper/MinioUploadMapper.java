@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.springframework.web.multipart.MultipartFile;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface MinioUploadMapper {
     @Mapping(source = "fileName", target = "model.getOriginalFilename()")
     @Mapping(source = "fileType", target = "model.getContentType()")

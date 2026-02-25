@@ -9,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.nio.file.Path;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface SystemFileUploadMapper {
 
     @Mapping(source = "fileName", target = "originalFileName")

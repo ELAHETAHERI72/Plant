@@ -29,7 +29,7 @@ public class Plant implements Serializable {
     public static final String COLOR = "color";
     public static final String AGE = "age";
     public static final String SIZE = "size";
-    public static final String TYPE_ID = "type_id";
+    public static final String TYPE_ID = "type";
 
 
     @Id
@@ -38,8 +38,8 @@ public class Plant implements Serializable {
 
     @Column(name = NAME)
     private String name;
-    @Column(name = TYPE)
-    private PlantType type;
+//    @Column(name = TYPE)
+//    private PlantType type;
     @Column(name = HAS_FLOWER)
     private Boolean hasFlower;
     @Column(name = WATERING_PERIOD)
@@ -65,8 +65,11 @@ public class Plant implements Serializable {
     @Column(name = SIZE)
     private Integer size;
 
-    @ManyToOne
-    @JoinColumn(name = TYPE_ID, referencedColumnName = "id")
-    private PlantCategory typeId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(
+            name = TYPE_ID, nullable = false,
+            referencedColumnName = "id",
+            foreignKey = @ForeignKey(name = "FK_PLANT_TYPE"))
+    private PlantCategory type;
 
 }

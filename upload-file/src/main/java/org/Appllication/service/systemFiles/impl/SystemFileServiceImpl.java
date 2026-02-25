@@ -25,7 +25,7 @@ public class SystemFileServiceImpl implements SystemFileService {
     private String uploadDir;
 
     private final SystemFileRepository repo;
-//    private final SystemFileUploadMapper mapper;
+    private SystemFileUploadMapper mapper;
 
     @Override
     @Transactional
@@ -48,8 +48,8 @@ public class SystemFileServiceImpl implements SystemFileService {
         Files.copy(file.getInputStream(), filePath);
 
         // Save metadata
-//        SystemFile systemFile = mapper.toDomain(file, filePath, originalFileName);
+        SystemFile systemFile = mapper.toDomain(file, filePath, originalFileName);
 
-        return null;
+        return systemFile;
     }
 }

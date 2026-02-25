@@ -6,7 +6,7 @@ import org.Appllication.dto.PlantResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(config = GlobalConfig.class)
+@Mapper(componentModel = "spring")
 public interface PlantMapper {
 
     @Mapping(target = "updateDate", ignore = true)

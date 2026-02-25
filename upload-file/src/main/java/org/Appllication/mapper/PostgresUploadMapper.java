@@ -5,7 +5,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.springframework.web.multipart.MultipartFile;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface PostgresUploadMapper {
 
    @Mapping(source = "fileName",target = "model.getOriginalFilename()")
